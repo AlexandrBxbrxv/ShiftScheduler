@@ -1,0 +1,13 @@
+python -Xutf8 manage.py dumpdata catalog -o fixtures\catalog_data.json
+
+python manage.py loaddata fixtures\groups_data.json
+
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+
+flake8 . --exclude=.venv,env,pyproject.tml,poetry.lock,migrations --ignore=E501
+
+redis-server
