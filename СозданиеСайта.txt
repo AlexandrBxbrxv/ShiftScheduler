@@ -8,4 +8,5 @@ psycopg2
 3. django-admin startproject config . Внимание! Перед комитом вынести секретный ключ джанго
 в переменные окружения .env
 4. python manage.py startapp users
-5. В приложении users прописать минимально рабочую логику пользователя
+5. В приложении users прописать минимально рабочую логику пользователя,
+в config.settings добавить: AUTH_USER_MODEL = 'users.User'
